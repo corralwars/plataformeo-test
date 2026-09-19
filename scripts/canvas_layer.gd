@@ -14,7 +14,7 @@ func _ready():
 	total_coins = coins.size()
 	_update_label_coins()
 	time_left = start_time
-	
+		
 func _process(delta):
 	if time_left<=0.0:
 		get_tree().reload_current_scene()
@@ -42,5 +42,5 @@ func load_next_level():
 	var level_number=int(current_name.get_file().get_basename().replace("level",""))
 	var next_level = level_number+1
 	
-	var next_path="res://scenes/Level%d.tscn" % next_level
+	var next_path="res://scenes/level%d.tscn" % next_level
 	get_tree().change_scene_to_file(next_path)
