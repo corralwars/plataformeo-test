@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="plataformas2d"
+run/main_scene="uid://c27ps35u2oyo8"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[global_group]
+
+coins=""
+ui=""
 
 [rendering]
 
