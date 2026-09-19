@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://crkrqydufymbj"]
+
+[ext_resource type="Texture2D" uid="uid://1xg1cwnprnq7" path="res://assets/JumpPack-SimpleTiles v1.0/SimpleTiles_allColors.png" id="1_5pg7g"]
+[ext_resource type="Script" uid="uid://dwo1ibmltwug1" path="res://scripts/spikes.gd" id="1_xbcdo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cj01d"]
+size = Vector2(30, 9)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_xbcdo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_cj01d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5pg7g")
+region_enabled = true
+region_rect = Rect2(64.2594, 150.014, 31.7498, 9.87567)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
